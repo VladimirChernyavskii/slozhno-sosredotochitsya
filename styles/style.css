@@ -2,4 +2,244 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  background-image: url("../images/cover-image-dark.png");
+  background-attachment: fixed;
+  container-type: inline-size;
+  container-name: page;
+}
+
+.header{
+  position: relative;
+  display: grid;
+}
+
+.header::before,
+.header::after {
+  content: "";
+  position: absolute; 
+  width: 25px;
+  height: 25px;
+  border-style: solid; 
+}
+
+.header::before {
+  top: 10px;
+  right: 10px;
+  border-width: 1px 1px 0 0;
+  border-color: var(--accent-color);
+}
+
+.header::after {
+  bottom: 10px;
+  left: 10px;
+  border-width: 0 0 1px 1px;
+  border-color: var(--accent-color)
+}
+
+.bulb{
+  position: absolute;
+  top: 10px;
+  right: 38px;
+  text-transform: uppercase;
+  font-family: var(--font);
+  font-weight: var(--font-text-weight);
+  font-size: var(--font-size);
+  line-height: 25px;
+  color: var(--accent-color);
+  text-align: center;
+}
+
+.bulb::after{
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  top: 8px;
+  left: 42px;
+  border-radius: 100%;
+  box-shadow: inset;
+  background-color: var(--accent-color);
+  box-shadow: 0 0 4px 2px var(--accent-color);
+}
+
+.header__theme-menu{
+  justify-self: end;
+  margin-top: 77px;
+}
+
+.header__theme-menu-list{
+  margin-right: 18px;
+  display: grid;
+  gap: 16px;
+}
+
+.header__theme-menu-button{
+  background: none;
+  border: none;
+  text-transform: lowercase;
+  font-family: var(--font);
+  font-weight: var(--font-text-weight);
+  font-size: var(--font-size);
+  line-height: 18px;
+  color: var(--accent-color);
+  text-align: center;
+}
+
+.header__logo{
+  margin-top: 70px;
+  margin-left: var(--side-margin);
+  font-family: var(--font);
+  font-weight: var(--font-title-weight);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 95.7px;
+  color: var(--logo-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.title-decor{
+  background-color: var(--accent-color);
+}
+
+.h1-title-container{
+  margin: 55px var(--side-margin) 66px var(--side-margin);
+}
+
+.h1-title{
+  font-family: var(--font);
+  font-weight: var(--font-title-weight);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  color: var(--main-color);
+}
+
+.h2-title{
+  font-family: var(--font);
+  font-weight: var(--font-title-weight);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  color: var(--accent-color);
+}
+
+.h3-title{
+  font-family: var(--font);
+  font-weight: var(--font-title-weight);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  color: var(--main-color);
+}
+
+.h4-title{
+  font-family: var(--font);
+  font-weight: var(--font-text-weight);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  color: var(--main-color);
+}
+
+.text{
+  font-family: var(--font);
+  font-weight: var(--font-text-weight);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  color: var(--text-color);
+}
+
+.content{
+  margin: 39px var(--side-margin) 40px var(--side-margin);
+  display: grid;
+  gap: var(--section-gap);
+}
+
+.content__section{
+  display: grid;
+  gap: var(--block-gap);
+}
+
+.content__article{
+  display: grid;
+  gap: var(--aricle-gap);
+}
+
+.content__image-section{
+  display: grid;
+  gap: 7px;
+}
+
+.image{
+  width: 100%;
+}
+
+.footer{
+  position: relative;
+}
+
+.footer__logo{
+  margin-top: 321px;
+  margin-left: 14px;
+  margin-bottom: 285px;
+  font-family: var(--font);
+  font-weight: var(--font-title-weight);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 95.7px;
+  color: var(--logo-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.footer::before,
+.footer::after {
+  content: "";
+  position: absolute; 
+  width: 25px;
+  height: 25px;
+  border-style: solid; 
+}
+
+.footer::before {
+  top: -277px;
+  right: 10px;
+  border-width: 1px 1px 0 0;
+  border-color: var(--accent-color);
+}
+
+.footer::after {
+  bottom: -275px;
+  left: 10px;
+  border-width: 0 0 1px 1px;
+  border-color: var(--accent-color)
+}
+
+@container page (inline-size >= 768px) {
+  .header::before {
+    top: 20px;
+    right: 20px;
+  }
+  
+  .header::after {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .bulb{
+    top: 20px;
+    right: 49px;
+  }
+
+  .header__theme-menu{
+    margin-top: 194px;
+  }
+
+  .header__theme-menu-list{
+    margin-right: 28px;
+  }
+
+  .header__logo{
+    margin-top: 180px;
+    margin-left: 0;
+  }
+
+  .h1-title-container{
+    justify-self: end;
+    margin: 162px 20px 183px 0;
+    max-width: 364px;
+  }
 }

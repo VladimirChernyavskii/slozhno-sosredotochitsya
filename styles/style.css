@@ -65,13 +65,13 @@
 
 .header__theme-menu {
   justify-self: end;
-  margin-top: 77px;
+  margin-top: 74px;
 }
 
 .header__theme-menu-list {
-  margin-right: 18px;
+  margin-right: 12px;
   display: grid;
-  gap: 16px;
+  gap: 10px;
 }
 
 .header__theme-menu-button {
@@ -84,10 +84,39 @@
   line-height: 18px;
   color: var(--accent-color);
   text-align: center;
+  width: 68px;
+  height: 26px;
+}
+
+.header__theme-menu-button:hover{
+  outline: 1px solid rgba(255, 0, 112, 0.6);
+}
+.header__theme-menu-button:focus-visible{
+  outline: none;
+  border-bottom: 1px solid rgba(255, 0, 112, 0.6);
+}
+
+.header__theme-menu-button_active{
+  pointer-events: none;
+}
+
+.link{
+  text-decoration: none;
+  text-shadow: 1px 1px 0 var(--accent-color);
+}
+
+.link:hover{
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.link:focus-visible{
+  outline: 1px solid rgba(241, 178, 206, 0.6);
+  outline-offset: -2px;
 }
 
 .header__logo {
-  margin-top: 70px;
+  margin-top: 67px;
   margin-left: var(--side-margin);
   font-family: var(--font);
   font-weight: var(--font-title-weight);
@@ -231,15 +260,15 @@
   }
 
   .header__theme-menu {
-    margin-top: 194px;
+    margin-top: 190px;
   }
 
   .header__theme-menu-list {
-    margin-right: 28px;
+    margin-right: 22px;
   }
 
   .header__logo {
-    margin-top: 180px;
+    margin-top: 178px;
     margin-left: 0;
   }
 
@@ -339,17 +368,17 @@
 @container page (inline-size >= 1024px) {
   .header__theme-menu {
     justify-self: center;
-    margin-top: 21px;
+    margin-top: 19px;
   }
 
   .header__theme-menu-list {
     margin-right: 0;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 25px;
+    gap: 12px;
   }
 
   .header__logo {
-    margin-top: 280px;
+    margin-top: 275px;
     margin-left: 0;
     font-size: 157px;
     line-height: 129.53px;

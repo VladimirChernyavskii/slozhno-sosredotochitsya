@@ -130,11 +130,11 @@
   background-color: var(--accent-color);
 }
 
-.h1-title-container {
+.main-title-container {
   margin: 55px var(--side-margin) 66px var(--side-margin);
 }
 
-.h1-title {
+.main-title {
   font-family: var(--font);
   font-weight: var(--font-title-weight);
   font-size: var(--font-size);
@@ -142,7 +142,7 @@
   color: var(--main-color);
 }
 
-.h2-title {
+.section-title {
   font-family: var(--font);
   font-weight: var(--font-title-weight);
   font-size: var(--font-size);
@@ -150,7 +150,7 @@
   color: var(--accent-color);
 }
 
-.h3-title {
+.block-title {
   font-family: var(--font);
   font-weight: var(--font-title-weight);
   font-size: var(--font-size);
@@ -158,7 +158,7 @@
   color: var(--main-color);
 }
 
-.h4-title {
+.article-title {
   font-family: var(--font);
   font-weight: var(--font-text-weight);
   font-size: var(--font-size);
@@ -272,7 +272,7 @@
     margin-left: 0;
   }
 
-  .h1-title-container {
+  .main-title-container {
     justify-self: end;
     margin: 162px 20px 183px 0;
     max-width: 364px;
@@ -285,21 +285,24 @@
     gap: var(--section-gap);
   }
 
-  .content__two_column_section {
+  .content__reasons-section,
+  .content__tips-section {
     display: grid;
     grid-template-columns: 0.33fr 0.66fr;
     grid-template-areas: "title content";
   }
 
-  .content__two_column_section .h2-title {
+  .content__reasons-section.section-title,
+  .content__tips-section.section-title {
     grid-area: title;
   }
 
-  .content__two_column_section .content__column-container {
+  .content__reasons-section.content__column-container,
+  .content__tips-section.content__column-container {
     grid-area: content;
   }
 
-  .content__three_column_section .h2-title {
+  .content__cause-section .section-title {
     max-width: 236px;
   }
 
@@ -384,7 +387,7 @@
     line-height: 129.53px;
   }
 
-  .h1-title-container {
+  .main-title-container {
     margin: 112px 20px 136px 0;
     max-width: 491px;
   }
@@ -393,23 +396,24 @@
     bottom: 21px;
   }
 
-  .content__two_column_section {
+  .content__reasons-section,
+  .content__tips-section {
     grid-template-columns: 0.33fr 0.68fr;
   }
 
-  .content__three_column_section {
+  .content__cause-section {
     grid-template-rows: 47px 1fr;
   }
 
-  .content__three_column_section .h2-title {
+  .content__cause-section .section-title {
     max-width: 315px;
   }
 
-  .content__three_column_section .content__column-container {
+  .content__cause-section .content__column-container {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  .content__three_column_section .content__article {
+  .content__cause-section .content__article {
     grid-template-rows: 23px 1fr;
   }
 

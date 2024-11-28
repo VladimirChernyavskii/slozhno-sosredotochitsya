@@ -2,11 +2,10 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  background-image: url("../images/cover-image-dark.png");
+  background-image: var(--background-image);
   background-attachment: fixed;
   container-type: inline-size;
   container-name: page;
-  --page-side-margin: var(--side-margin);
 }
 
 .header {
@@ -88,29 +87,30 @@
   height: 26px;
 }
 
-.header__theme-menu-button:hover{
+.header__theme-menu-button:hover {
   outline: 1px solid rgba(255, 0, 112, 0.6);
 }
-.header__theme-menu-button:focus-visible{
+
+.header__theme-menu-button:focus-visible {
   outline: none;
   border-bottom: 1px solid rgba(255, 0, 112, 0.6);
 }
 
-.header__theme-menu-button_active{
+.header__theme-menu-button_active {
   pointer-events: none;
 }
 
-.link{
+.link {
   text-decoration: none;
   text-shadow: 1px 1px 0 var(--accent-color);
 }
 
-.link:hover{
+.link:hover {
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 
-.link:focus-visible{
+.link:focus-visible {
   outline: 1px solid rgba(241, 178, 206, 0.6);
   outline-offset: -2px;
 }
@@ -405,7 +405,7 @@
     max-width: 315px;
   }
 
-  .content__three_column_section .content__column-container{
+  .content__three_column_section .content__column-container {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
@@ -421,7 +421,7 @@
   }
 
   .footer::before {
-    top:37px;
+    top: 37px;
     right: 20px;
   }
 

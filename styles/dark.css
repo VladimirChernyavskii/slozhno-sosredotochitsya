@@ -20,7 +20,7 @@
   --text-color: #f1b2ce;
   --background-image: url("../images/cover-image-dark.png");
   --active-button-border-color: rgba(255, 0, 112, 1);
-  --button-border-color: rgba(255, 0, 112, 0.4 );
+  --button-border-color: rgba(255, 0, 112, 0.4);
   --link-border-color: rgba(241, 178, 206, 1);
   --bulb-visibility: visible;
 }
